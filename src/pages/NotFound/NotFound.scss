@@ -1,0 +1,27 @@
+@import "../../Variables.scss";
+
+.notfound{
+    flex: 1 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__text{
+        @include classic-text;
+
+        font-size: 35px;
+        position: relative;
+
+        &::before{
+            content: '404';
+            @include classic-text;
+
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            opacity: 0.1;
+            font-size: 100px;
+            transform: translate(-50%, -50%);
+        }
+    }
+}

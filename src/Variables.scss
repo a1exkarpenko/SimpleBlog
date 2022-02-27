@@ -1,0 +1,14 @@
+$main: #0099CC;
+$black: #000;
+$white: #fff;
+$red: #FF0033;
+
+$transition: all .15s ease;
+
+@mixin classic-text {
+    font-family: 'Oswald';
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 18px;
+    color: $black;
+}

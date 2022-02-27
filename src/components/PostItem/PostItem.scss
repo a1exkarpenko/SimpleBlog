@@ -1,0 +1,51 @@
+@import "../../Variables";
+
+.post-item{
+    flex: 0 0 calc(33.333% - 15px);
+    margin: 0 7.5px;
+    overflow: hidden;
+    margin-bottom: 15px;
+
+    &__link{
+        display: block;
+        border: 1px solid $main;
+        border-radius: 10px;
+        padding: 15px;
+        transition: $transition;
+        &:hover{
+            background-color: $main;
+            *{
+                color: $white;
+            }
+        }
+    }
+
+    &__title{
+        @include classic-text;
+
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 10px;
+        transition: $transition;
+    }
+
+    &__body{
+        @include classic-text;
+
+        transition: $transition;
+    }
+}
+
+@media (max-width: 1200px){
+    .post-item{
+        flex: 0 0 calc(50% - 15px);
+    }
+}
+
+@media (max-width: 767px){
+    .container{
+        .post-item{
+            flex: 0 0 calc(100% - 15px);
+        }
+    }
+}

@@ -1,0 +1,86 @@
+@import "../../Variables.scss";
+
+.form{
+    display: flex;
+    flex-direction: column;
+
+    &__input-wrap{
+        width: 100%;
+        position: relative;
+        margin-bottom: 30px;
+    }
+
+    &__input-label{
+        @include classic-text;
+
+        position: absolute;
+        top: 0;
+        left: 30px;
+        font-size: 14px;
+        transform: translateY(-50%);
+        background-color: $white;
+        z-index: 1;
+        color: $main;
+        padding: 0px 5px;
+        letter-spacing: 1px;
+    }
+
+    &__input,
+    &__textarea{
+        @include classic-text;
+
+        border: 1px solid $main;
+        padding: 10px;
+        border-radius: 10px;
+        position: relative;
+        width: 100%;
+
+        &::placeholder{
+            opacity: 0.4;
+            font-weight: 400;
+        }
+    }
+
+    &__input{
+        font-weight: 600;
+    }
+
+    &__textarea{
+        resize: vertical;
+        min-height: 50px;
+        min-height: 200px;
+    }
+
+    &__btns{
+        display: flex;
+        justify-content: space-between
+    }
+
+    &__btn{
+        @include classic-text;
+
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 15px 24px;
+        border-radius: 10px;
+        letter-spacing: 1px;
+        background-color: transparent;
+        border: 1px solid $main;
+        color: $main;
+        transition: $transition;
+
+        &:hover{
+            background-color: $main;
+            color: $white;
+        }
+    }
+
+    &__error{
+        @include classic-text;
+
+        color: $red;
+        margin-top: 10px;
+    }
+}

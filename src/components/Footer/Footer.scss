@@ -1,0 +1,48 @@
+@import "../../Variables";
+
+.footer{
+    background-color: $main;
+    padding: 50px 0;
+
+    &__nav{
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__title{
+        @include classic-text;
+
+        font-size: 25px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        color: $white;
+        margin-bottom: 30px;
+        user-select: none;
+        
+        &.active{
+            pointer-events: none;
+        }
+    }
+
+    &__list{
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__item{
+        &+&{
+            margin-top: 15px;
+        }
+    }
+
+    &__link{
+        @include classic-text;
+
+        letter-spacing: 1px;
+        color: $white;
+
+        &.active{
+            pointer-events: none;
+        }
+    }
+}
